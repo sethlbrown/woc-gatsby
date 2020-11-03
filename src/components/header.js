@@ -1,5 +1,5 @@
-import { graphql, useStaticQuery, Link } from "gatsby";
-import React, { useState } from "react";
+import { graphql, useStaticQuery, Link } from 'gatsby';
+import React, { useState } from 'react';
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -34,6 +34,7 @@ function Header() {
         </Link>
 
         <button
+          type="button"
           className="items-center block px-3 py-2 text-white border border-white rounded md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}
         >

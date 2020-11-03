@@ -1,5 +1,6 @@
-import React from "react";
-import wocLogo from "../images/woc-logo.png";
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React from 'react';
+import wocLogo from '../images/woc-logo.png';
 
 export default function Footer() {
   return (
@@ -35,7 +36,10 @@ export default function Footer() {
               </li>
             </ul>
             <div className="flex items-center justify-start mt-4">
-              <a href="#" className="hover:text-white">
+              <a
+                href="https://www.facebook.com/Way-of-Compassion-Bike-Project-306763116012587/"
+                className="hover:text-blue-500"
+              >
                 <span className="sr-only">Facebook</span>
                 <svg
                   className="w-6 h-6"
@@ -45,9 +49,11 @@ export default function Footer() {
                 >
                   <path d="M16.0714 0C16.6071 0 17.0625 0.1875 17.4375 0.5625C17.8125 0.9375 18 1.39286 18 1.92857V16.0714C18 16.6071 17.8125 17.0625 17.4375 17.4375C17.0625 17.8125 16.6071 18 16.0714 18H10.567V11.8929H12.8973L13.3393 9H10.567V7.11161C10.567 6.09375 11.1027 5.58482 12.1741 5.58482H13.4196V3.13393C12.6696 3 11.933 2.93304 11.2098 2.93304C10.433 2.93304 9.76339 3.08036 9.20089 3.375C8.66518 3.66964 8.23661 4.11161 7.91518 4.70089C7.59375 5.29018 7.43304 5.98661 7.43304 6.79018V9H4.90179V11.8929H7.43304V18H1.92857C1.39286 18 0.9375 17.8125 0.5625 17.4375C0.1875 17.0625 0 16.6071 0 16.0714V1.92857C0 1.39286 0.1875 0.9375 0.5625 0.5625C0.9375 0.1875 1.39286 0 1.92857 0H16.0714Z" />
                 </svg>
-
               </a>
-              <a href="#" className="hover:text-white">
+              <a
+                href="https://www.youtube.com/watch?v=REDyP1w7IVo&t=8s"
+                className="hover:text-red-500"
+              >
                 <span className="sr-only">YouTube</span>
                 <svg
                   className="w-6 h-6 ml-4"
@@ -60,7 +66,7 @@ export default function Footer() {
               </a>
             </div>
             <div className="mt-6">
-              <a href="#">
+              <a href="./contact">
                 <span className="inline-flex shadow-sm">
                   <button
                     type="button"
@@ -107,14 +113,17 @@ export default function Footer() {
               </div>
               <div className="mt-2 flex max-w-l z-10">
                 <div className="relative flex-grow focus-within:z-10">
-                  <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"></div>
+                  <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none" />
                   <input
                     id="email"
-                    className="form-input block w-full rounded-none pl-4 h-11 transition ease-in-out duration-150 sm:text-sm sm:leading-5"
+                    className="text-black form-input block w-full rounded-none pl-4 h-11 transition ease-in-out duration-150 sm:text-sm sm:leading-5"
                     placeholder="Your Email Address"
                   />
                 </div>
-                <button className="relative inline-flex items-center">
+                <button
+                  type="button"
+                  className="relative inline-flex items-center"
+                >
                   <svg
                     width="44"
                     height="44"
