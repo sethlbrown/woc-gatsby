@@ -5,9 +5,9 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Tailwind`,
-    description: `Gatsby starter styled with Tailwind`,
-    author: `@taylorbryant`,
+    title: `Way of Compassion Bike Project`,
+    description: `Carbondale, Colorado based community bike program`,
+    author: `@sethlbrown`,
   },
   plugins: [
     `gatsby-plugin-eslint`,

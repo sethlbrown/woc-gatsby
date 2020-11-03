@@ -14,8 +14,14 @@ function Header() {
   `);
 
   return (
-    <header className="bg-teal-600">
-      <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8">
+    <header className="">
+      <section>
+        <div className="bg-gray-900 flex h-10 items-center justify-end max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 text-gray-200">
+          <span className="font-thin mr-1">P:</span>
+          <a href="tel:970-340-8151">970.340.8151</a>
+        </div>
+      </section>
+      <div className="flex flex-wrap items-center justify-between max-w-7xl p-4 mx-auto md:p-8">
         <Link to="/">
           <h1 className="flex items-center text-white no-underline">
             <svg
