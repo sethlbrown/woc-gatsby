@@ -62,15 +62,27 @@ function Header() {
           {[
             {
               route: `/about`,
-              title: `About`,
+              title: `About Us`,
+            },
+            {
+              route: `/programs`,
+              title: `Our Programs`,
+            },
+            {
+              route: `/calendar`,
+              title: `Events`,
+            },
+            {
+              route: `/gallery`,
+              title: `Photos and Videos`,
             },
             {
               route: `/contact`,
-              title: `Contact`,
+              title: `Contact Us`,
             },
           ].map((link) => (
             <Link
-              className="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
+              className="mt-2 block px-3 py-2 rounded-md text-base font-medium text-gray-900  hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-900 transition duration-150 ease-in-out" // block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6
               key={link.title}
               to={link.route}
             >
