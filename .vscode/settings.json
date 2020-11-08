@@ -18,6 +18,7 @@
     "editor.codeActionsOnSave": {
         "source.fixAll": true
     },
+    // Disable ESLint react/jsx-props-no-spreading
     "eslint.options": {
         "react/jsx-props-no-spreading": [
             "off"
