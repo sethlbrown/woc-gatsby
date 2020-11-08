@@ -21,7 +21,7 @@ function Header() {
           <a href="tel:970-340-8151">970.340.8151</a>
         </div>
       </section>
-      <div className="flex flex-wrap items-center justify-between max-w-7xl p-4 mx-auto md:p-8">
+      <div className="flex flex-wrap items-center justify-end max-w-7xl px-2 sm:px-4 lg:px-8 mx-auto">
         <Link to="/">
           <h1 className="flex items-center text-white no-underline">
             <svg
@@ -41,16 +41,30 @@ function Header() {
 
         <button
           type="button"
-          className="items-center block px-3 py-2 text-white border border-white rounded md:hidden"
+          className="md:hidden flex items-center justify-center rounded-md text-teal-500 focus:outline-none transition duration-150 ease-in-out"
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
-            className="w-3 h-3 fill-current"
-            viewBox="0 0 20 20"
+            className="w-10 h-10"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            <path
+              className={`${!isExpanded ? `inline-flex` : `hidden`}`}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+            <path
+              className={`${!isExpanded ? `hidden` : `inline-flex`}`}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
 
@@ -82,7 +96,7 @@ function Header() {
             },
           ].map((link) => (
             <Link
-              className="mt-2 block px-3 py-2 rounded-md text-base font-medium text-gray-900  hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-900 transition duration-150 ease-in-out" // block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6
+              className="mt-2 block px-3 py-2 rounded-md text-base font-medium text-gray-900  hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-900 transition duration-150 ease-in-out md:inline-block md:mt-0 md:ml-6" // block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6
               key={link.title}
               to={link.route}
             >
