@@ -1,47 +1,21 @@
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { Link } from 'gatsby';
 import React, { useState } from 'react';
+import wocLogo from '../images/woc_logo.svg';
 
-function Header() {
+export default function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
-  const { site } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   return (
     <header className="">
-      <section>
-        <div className="bg-gray-900 flex h-10 items-center justify-end max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 text-gray-200">
-          <span className="font-thin mr-1">P:</span>
-          <a href="tel:970-340-8151">970.340.8151</a>
-        </div>
-      </section>
-      <div className="flex flex-wrap items-center justify-end max-w-7xl px-2 sm:px-4 lg:px-8 mx-auto">
+      <div className="flex flex-wrap items-center justify-between max-w-7xl px-2 sm:px-4 lg:px-8 xl:pr-0 xl:pl-8 mx-auto">
         <Link to="/">
-          <h1 className="flex items-center text-white no-underline">
-            <svg
-              className="w-8 h-8 mr-2 fill-current"
-              height="54"
-              viewBox="0 0 54 54"
-              width="54"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
-            </svg>
-            <span className="text-xl font-bold tracking-tight">
-              {site.siteMetadata.title}
-            </span>
+          <h1 className="flex h-16 items-center text-black no-underline">
+            <img alt="Bike Project Logo" src={wocLogo} />
           </h1>
         </Link>
 
         <button
           type="button"
-          className="md:hidden flex items-center justify-center rounded-md text-teal-500 focus:outline-none transition duration-150 ease-in-out"
+          className="lg:hidden flex items-center justify-center rounded-md text-teal-500 focus:outline-none transition duration-150 ease-in-out"
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
@@ -71,7 +45,7 @@ function Header() {
         <nav
           className={`${
             isExpanded ? `block` : `hidden`
-          } md:block md:items-center w-full md:w-auto`}
+          } h-screen w-full lg:h-auto lg:flex lg:flex-grow lg:items-center lg:ml-6 lg:w-auto`}
         >
           {[
             {
@@ -95,18 +69,31 @@ function Header() {
               title: `Contact Us`,
             },
           ].map((link) => (
-            <Link
-              className="mt-2 block px-3 py-2 rounded-md text-base font-medium text-gray-900  hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-900 transition duration-150 ease-in-out md:inline-block md:mt-0 md:ml-6" // block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6
-              key={link.title}
-              to={link.route}
-            >
-              {link.title}
-            </Link>
+            <div className="flex items-center h-16 lg:border-l lg:border-gray-200 lg:border-solid hover:bg-gray-200 transition duration-150 ease-in-out">
+              <Link
+                className="px-4 text-base font-medium leading-5 xl:text-large text-gray-800 focus:font-bold focus:outline-none hover:bg-gray-200 lg:mt-0 lg:ml-6" // block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6
+                key={link.title}
+                to={link.route}
+              >
+                {link.title}
+              </Link>
+            </div>
           ))}
         </nav>
+        <div className="hidden xl:block shadow h-16 flex-shrink">
+          <a
+            href="https://www.paypal.com/donate?token=Pe04TVOdFBnP9reQgy_worFEVWaYb2CBiiWP-DqiiLOHGOHNPN90uWbrwCvNTwGLgk7HwsVgqA5LZUko"
+            className="w-full h-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium text-white bg-teal-600 hover:bg-gray-900 focus:outline-none focus:shadow-outline-gray transition duration-150 ease-in-out"
+          >
+            Donate a Bike{' '}
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2307997/arrow.svg"
+              className="px-2"
+              alt="arrow"
+            />
+          </a>
+        </div>
       </div>
     </header>
   );
 }
-
-export default Header;
