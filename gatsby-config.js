@@ -1,3 +1,7 @@
+const dotenv = require('dotenv');
+
+dotenv.config({ path: '.env' });
+
 const resolveConfig = require('tailwindcss/resolveConfig');
 const tailwindConfig = require('./tailwind.config.js');
 
@@ -8,6 +12,7 @@ module.exports = {
     title: `Way of Compassion Bike Project`,
     description: `Carbondale, Colorado based community bike program`,
     author: `@sethlbrown`,
+    siteUrl: `https://www.wocbikeproject.org`,
   },
   plugins: [
     `gatsby-plugin-eslint`,
@@ -37,5 +42,15 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: `01gkrqr1`,
+        dataset: `production`,
+        watchMode: true,
+        token: process.env.SANITY_TOKEN,
+        graphqlTag: 'default',
+      },
+    },
   ],
 };
