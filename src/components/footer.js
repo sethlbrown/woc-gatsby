@@ -27,7 +27,7 @@ export default function Footer() {
             <h4 className="text-gray-100 leading-5 font-semibold tracking-wider">
               Address
             </h4>
-            <ul className="font-thin mt-2 tracking-wider">
+            <ul className="font-extralight mt-2 tracking-wider">
               <li className="mt-2">520 S. 3rd St.</li>
               <li className="mt-2">Carbondale,</li>
               <li className="mt-2">CO 81623</li>
@@ -70,7 +70,7 @@ export default function Footer() {
                 <span className="inline-flex shadow-sm">
                   <button
                     type="button"
-                    className="inline-flex items-center px-4 py-2 border-2 border-gray-100 hover:border-white font-bold leading-5 font-medium hover:text-white focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 md:mb-12"
+                    className="inline-flex items-center px-4 py-2 border-2 border-gray-100 hover:border-white font-bold leading-5 font-medium hover:text-white focus:outline-none focus:border-blue-300 focus:ring-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 md:mb-12"
                   >
                     Contact Us
                   </button>
@@ -82,7 +82,7 @@ export default function Footer() {
             <h4 className="flex flex-grow-0 text-gray-100 leading-5 font-semibold tracking-wider">
               Hours
             </h4>
-            <ul className="font-thin tracking-wider">
+            <ul className="font-extralight tracking-wider">
               <li className="mt-2">Sun. 11-5pm</li>
               <li className="mt-2">Mon. 2-6pm</li>
               <li className="mt-2">Wed. 2-5pm</li>
@@ -156,7 +156,7 @@ export default function Footer() {
                   src={wocLogo}
                   alt="Logo for the Way of Compassion Foundation"
                 />
-                <div className="font-thin leading-snug mt-4 sm:ml-4 text-gray-100 text-sm tracking-wider">
+                <div className="font-extralight leading-snug mt-4 sm:ml-4 text-gray-100 text-sm tracking-wider">
                   The WOC Bike Project is part of the Way of Compassion
                   Foundation.
                   <br /> &copy; {new Date().getFullYear()} Way of Compassion

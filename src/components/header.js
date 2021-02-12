@@ -86,7 +86,7 @@ export default function Header() {
         <div className="hidden xl:block shadow h-16 flex-shrink">
           <a
             href="https://www.paypal.com/donate?token=Pe04TVOdFBnP9reQgy_worFEVWaYb2CBiiWP-DqiiLOHGOHNPN90uWbrwCvNTwGLgk7HwsVgqA5LZUko"
-            className="w-full h-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium text-white bg-teal-600 hover:bg-gray-900 focus:outline-none focus:shadow-outline-gray transition duration-150 ease-in-out"
+            className="w-full h-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium text-white bg-teal-600 hover:bg-gray-900 focus:outline-none focus:ring-gray transition duration-150 ease-in-out"
           >
             Donate a Bike{' '}
             <img
