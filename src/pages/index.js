@@ -10,7 +10,6 @@ export default function IndexPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Home"
       />
-
       <section className="text-center">
         <img
           alt="Cat and human sitting on a couch"
