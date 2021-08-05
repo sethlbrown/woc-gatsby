@@ -3,3 +3,51 @@
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
+
+@layer base {
+
+    article h1 {
+        @apply 
+            text-5xl 
+            font-bold
+            mb-4
+    }
+    article h2 {
+        @apply 
+            text-3xl 
+            font-bold 
+            my-6
+    }
+    article h3 {
+        @apply text-2xl;
+    }
+    article h4 {
+        @apply text-xl;
+    }
+    article strong {
+        @apply 
+            font-semibold
+            leading-loose
+            text-xl
+    }
+
+    article p {
+        @apply 
+            max-w-5xl
+            py-4
+            leading-loose
+            font-normal
+            text-xl
+    }
+
+    article ul {
+        @apply px-8
+    }
+    article li {
+        @apply 
+            list-disc
+            leading-loose
+            font-normal
+            text-xl
+    }
+}
