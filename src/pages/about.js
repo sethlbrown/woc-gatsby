@@ -1,35 +1,31 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
+import { graphql } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import PortableText from '@sanity/block-content-to-react';
+// import SEO from '../components/seo';
 
-import SEO from '../components/seo';
-import dogIllustration from '../images/dog-illustration.svg';
+const AboutPage = ({ data }) => (
+  <article>
+    <h1>{data.page.title}</h1>
+    <GatsbyImage image={data.page.mainImage.asset.gatsbyImageData} />
+    <PortableText blocks={data.page._rawBody} />
+    <pre>{JSON.stringify(data.page._rawBody, null, 4)}</pre>
+  </article>
+);
+export const query = graphql`
+  query AboutPage {
+    page: sanityPost(slug: { current: { eq: "about-us" } }) {
+      id
+      title
+      _rawBody
+      mainImage {
+        asset {
+          gatsbyImageData
+        }
+      }
+    }
+  }
+`;
 
-export default function AboutPage() {
-  return (
-    <>
-      <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="About"
-      />
-
-      <section className="flex flex-col items-center md:flex-row">
-        <div className="md:w-2/3 md:mr-8">
-          <blockquote className="pl-4 font-serif leading-loose text-justify border-l-4 border-gray-900">
-            The point is... to live one&apos;s life in the full complexity of
-            what one is, which is something much darker, more contradictory,
-            more of a maelstrom of impulses and passions, of cruelty, ecstacy,
-            and madness, than is apparent to the civilized being who glides on
-            the surface and fits smoothly into the world.
-          </blockquote>
-
-          <cite className="block mt-4 text-xs font-bold text-right uppercase">
-            – Thomas Nagel
-          </cite>
-        </div>
-
-        <figure className="w-2/3 md:w-1/3">
-          <img alt="A dog relaxing" src={dogIllustration} />
-        </figure>
-      </section>
-    </>
-  );
-}
+export default AboutPage;
