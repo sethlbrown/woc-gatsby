@@ -6,7 +6,7 @@ import PortableText from '@sanity/block-content-to-react';
 // import SEO from '../components/seo';
 
 const AboutPage = ({ data }) => (
-  <article>
+  <article className="prose lg:prose-xl">
     <h1>{data.page.title}</h1>
     <GatsbyImage image={data.page.mainImage.asset.gatsbyImageData} />
     <PortableText blocks={data.page._rawBody} />

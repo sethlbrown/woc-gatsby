@@ -59,5 +59,5 @@ module.exports = {
   },
   variants: {},
   // https://github.com/tailwindcss/custom-forms
-  plugins: [require('tailwind-forms')()],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };
