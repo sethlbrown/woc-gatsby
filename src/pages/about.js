@@ -42,7 +42,6 @@ const AboutPage = ({ data }) => (
       <div className="max-w-7xl mx-auto relative px-4 pt-24 pb-8 sm:px-6 lg:h-64 lg:px-8">
         <h1
           className="
-            bg-red-600
             w-11/12 
             text-2xl 
             font-semibold 
@@ -58,7 +57,7 @@ const AboutPage = ({ data }) => (
         <div className="w-1/2 pb-4 border-t-2 border-white" />
       </div>
     </div>
-    <article className="bg-yellow-200 prose sm:ml-2 lg:ml-4 lg:prose-xl max-w-7xl">
+    <article className="prose sm:ml-2 lg:ml-4 lg:prose-xl max-w-7xl">
       <PortableText blocks={data.page._rawBody} serializers={serializer} />
     </article>
   </>

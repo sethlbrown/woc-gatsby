@@ -7,12 +7,12 @@ export default function Header() {
   return (
     <header className="">
       <div className="flex flex-wrap items-center justify-between max-w-7xl px-4 sm:px-6 lg:px-8 xl:pr-0 xl:pl-8 mx-auto">
-        <Link to="/">
+        <Link to="/" onClick={() => toggleExpansion(!isExpanded)}>
           <h1 className="flex h-16 items-center text-black no-underline">
             <img
               alt="Bike Project Logo"
               src={wocLogo}
-              className="bg-red-300 lg:h-14 lg:w-52"
+              className="lg:h-14 lg:w-52"
             />
             <span className="sr-only">Way of Compassion Bike Project</span>
           </h1>
@@ -77,6 +77,7 @@ export default function Header() {
                 className="px-4 text-base font-medium leading-5 xl:text-lg text-gray-800 focus:text-black focus:outline-none hover:bg-gray-200 lg:mt-0" // block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6
                 key={link.title}
                 to={link.route}
+                onClick={() => toggleExpansion(!isExpanded)}
               >
                 {link.title}
               </Link>
