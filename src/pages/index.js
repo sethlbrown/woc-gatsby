@@ -2,6 +2,7 @@ import React from 'react';
 
 import SEO from '../components/seo';
 import catAndHumanIllustration from '../images/cat-and-human-illustration.svg';
+import Tout from '../components/tout';
 
 export default function IndexPage() {
   return (
@@ -10,7 +11,8 @@ export default function IndexPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Home"
       />
-      <section className="text-center">
+      <Tout />
+      <article className="text-center">
         <img
           alt="Cat and human sitting on a couch"
           className="block w-1/2 mx-auto mb-8"
@@ -33,7 +35,7 @@ export default function IndexPage() {
           </a>
           , a utility-first CSS framework.
         </p>
-      </section>
+      </article>
     </>
   );
 }

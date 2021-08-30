@@ -48,8 +48,8 @@ module.exports = {
     {
       resolve: `gatsby-source-sanity`,
       options: {
-        projectId: `01gkrqr1`,
-        dataset: `production`,
+        projectId: process.env.SANITY_PROJECTID,
+        dataset: process.env.SANITY_DATASET,
         watchMode: true,
         token: process.env.SANITY_TOKEN,
         graphqlTag: 'default',

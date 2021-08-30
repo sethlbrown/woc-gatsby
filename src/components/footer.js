@@ -5,7 +5,7 @@ import wocLogo from '../images/woc-logo.png';
 export default function Footer() {
   return (
     <div>
-      <div className="bg-white max-w-7xl -mb-px mx-auto px-2 sm:px-4 lg:px-8">
+      <div className="bg-white max-w-7xl -mb-px mx-auto px-4 sm:px-6 lg:px-8">
         <svg
           width="79"
           height="44"
@@ -21,7 +21,7 @@ export default function Footer() {
           />
         </svg>
       </div>
-      <footer className="bg-gray-900 max-w-7xl mx-auto px-4 sm:px-8 w-screen text-gray-100">
+      <footer className="bg-gray-900 max-w-7xl mx-auto px-4 sm:px-6 w-screen text-gray-100">
         <div className="flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-4">
           <div className="mt-12 sm:mt-8 w-full sm:col-span-1">
             <h4 className="text-gray-100 leading-5 font-semibold tracking-wider">

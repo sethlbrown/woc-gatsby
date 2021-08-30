@@ -4,3 +4,14 @@
 /*! purgecss end ignore */
 @tailwind utilities;
 
+@layer base {
+    article {
+        @apply 
+        flex-1 
+        w-full 
+        max-w-7xl 
+        mx-auto
+        px-4
+        py-4
+    }
+  }

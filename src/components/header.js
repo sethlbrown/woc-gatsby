@@ -6,13 +6,13 @@ export default function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
   return (
     <header className="">
-      <div className="flex flex-wrap items-center justify-between max-w-7xl px-2 sm:px-4 lg:px-8 xl:pr-0 xl:pl-8 mx-auto">
+      <div className="flex flex-wrap items-center justify-between max-w-7xl px-4 sm:px-6 lg:px-8 xl:pr-0 xl:pl-8 mx-auto">
         <Link to="/">
           <h1 className="flex h-16 items-center text-black no-underline">
             <img
               alt="Bike Project Logo"
               src={wocLogo}
-              className="lg:h-14 lg:w-52"
+              className="bg-red-300 lg:h-14 lg:w-52"
             />
             <span className="sr-only">Way of Compassion Bike Project</span>
           </h1>
