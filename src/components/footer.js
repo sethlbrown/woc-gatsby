@@ -140,13 +140,13 @@ export default function Footer() {
                       d="M22.4767 15L30.0001 22.5L22.4767 30"
                       stroke="white"
                       strokeWidth="3"
-                      strokeMiterLimit="10"
+                      strokeMiterlimit="10"
                     />
                     <path
                       d="M15 22.499H30"
                       stroke="white"
                       strokeWidth="3"
-                      strokeMiterLimit="10"
+                      strokeMiterlimit="10"
                     />
                   </svg>
                 </button>
