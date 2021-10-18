@@ -28,8 +28,8 @@ const serializer = {
 const AboutPage = ({ data }) => (
   // React Fragment notation
   <>
-    <div className="relative">
-      <div className="max-w-7xl mx-auto absolute inset-0">
+    <div className="max-w-7xl mx-auto relative">
+      <div className="absolute inset-0">
         <GatsbyImage
           image={data.page.mainImage.asset.gatsbyImageData}
           className="w-full h-full object-cover"
@@ -39,7 +39,7 @@ const AboutPage = ({ data }) => (
           aria-hidden="true"
         />
       </div>
-      <div className="max-w-7xl mx-auto relative px-4 pt-24 pb-8 sm:px-6 lg:h-64 lg:px-8">
+      <div className="relative px-4 pt-24 pb-8 sm:px-8 lg:h-64 lg:px-12">
         <h1
           className="
             w-11/12 
@@ -57,9 +57,9 @@ const AboutPage = ({ data }) => (
         <div className="w-1/2 pb-4 border-t-2 border-white" />
       </div>
     </div>
-    <article className="prose sm:ml-2 lg:ml-4 lg:prose-xl max-w-7xl">
+    <div className="mx-auto max-w-7xl p-4 sm:p-8 lg:p-12 prose lg:prose-xl">
       <PortableText blocks={data.page._rawBody} serializers={serializer} />
-    </article>
+    </div>
   </>
 );
 

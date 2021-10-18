@@ -3,6 +3,8 @@ import React from 'react';
 import Banner from './banner';
 import Header from './header';
 import Footer from './footer';
+import Donate from './donate';
+import Testimonials from './testimonials';
 
 function Layout({ children }) {
   return (
@@ -12,6 +14,8 @@ function Layout({ children }) {
 
       <main>{children}</main>
 
+      <Donate />
+      <Testimonials />
       <Footer />
     </div>
   );

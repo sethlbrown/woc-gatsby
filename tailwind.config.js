@@ -55,6 +55,9 @@ module.exports = {
           900: '#1A2328', // Black 1
         },
       },
+      backgroundImage: {
+        cat: 'url("../images/aspens.png")',
+      },
     },
   },
   variants: {},

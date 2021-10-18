@@ -72,9 +72,23 @@ export default function Header() {
               title: `Contact Us`,
             },
           ].map((link) => (
-            <div className="flex items-center h-16 lg:border-l lg:border-gray-200 lg:border-solid hover:bg-gray-200 transition duration-150 ease-in-out">
+            <div
+              className="
+              flex 
+              items-center 
+              h-16 
+              lg:border-t-4 
+              lg:border-teal-400 
+              lg:border-solid 
+              lg:border-opacity-0 
+              hover:border-opacity-100 
+              hover:bg-gray-200
+              transition 
+              duration-150 
+              ease-in-out"
+            >
               <Link
-                className="px-4 text-base font-medium leading-5 xl:text-lg text-gray-800 focus:text-black focus:outline-none hover:bg-gray-200 lg:mt-0" // block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6
+                className="px-4 text-base font-bold hover:font-extrabold leading-5 xl:text-lg text-gray-800 focus:text-black focus:outline-none lg:mt-0" // block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6
                 key={link.title}
                 to={link.route}
                 onClick={() => toggleExpansion(!isExpanded)}
