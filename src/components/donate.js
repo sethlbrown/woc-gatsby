@@ -1,4 +1,5 @@
 import React from 'react';
+import DonateButton from './donate-button';
 
 export default function Donate() {
   return (
@@ -29,9 +30,7 @@ export default function Donate() {
             We’re always looking for funds to help us teach, run programs, and
             get bikes out into the community. And, once social distancing
             restrictions lift, we'll be looking for volunteers.
-            <div className="border-2 border-black text-lg font-semibold flex items-center justify-center py-2 px-6 my-4 hover:bg-black hover:text-white">
-              DONATE
-            </div>
+            <DonateButton />
           </div>
         </div>
       </div>

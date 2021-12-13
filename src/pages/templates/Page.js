@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
@@ -25,7 +24,7 @@ const serializer = {
   },
 };
 
-const AboutPage = ({ data }) => (
+const SinglePage = ({ data }) => (
   // React Fragment notation
   <>
     <div className="max-w-7xl mx-auto relative">
@@ -63,13 +62,9 @@ const AboutPage = ({ data }) => (
   </>
 );
 
-// data.propTypes = {
-//   page.title: PropTypes.string.isRequired
-// };
-
 export const query = graphql`
-  query AboutPage {
-    page: sanityPost(slug: { current: { eq: "about-us" } }) {
+  query PageQuery($id: String!) {
+    page: sanityPost(id: { eq: $id }) {
       id
       title
       _rawBody(resolveReferences: { maxDepth: 10 })
@@ -82,4 +77,4 @@ export const query = graphql`
   }
 `;
 
-export default AboutPage;
+export default SinglePage;

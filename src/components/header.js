@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import wocLogo from '../images/woc_logo.svg';
+import DonateButton from './donate-button';
 
 export default function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -98,18 +99,8 @@ export default function Header() {
             </div>
           ))}
         </nav>
-        <div className="hidden xl:block shadow h-16 flex-shrink">
-          <a
-            href="https://www.paypal.com/donate?token=Pe04TVOdFBnP9reQgy_worFEVWaYb2CBiiWP-DqiiLOHGOHNPN90uWbrwCvNTwGLgk7HwsVgqA5LZUko"
-            className="w-full h-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium text-white bg-teal-600 hover:bg-gray-900 focus:outline-none focus:ring-gray transition duration-150 ease-in-out"
-          >
-            Donate a Bike{' '}
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2307997/arrow.svg"
-              className="px-2"
-              alt="arrow"
-            />
-          </a>
+        <div className="hidden xl:block">
+          <DonateButton />
         </div>
       </div>
     </header>
