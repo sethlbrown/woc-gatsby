@@ -27,9 +27,11 @@ export default function Donate() {
             <h2 className="block py-4 text-3xl font-bold text-black">
               Help out!
             </h2>
-            We’re always looking for funds to help us teach, run programs, and
-            get bikes out into the community. And, once social distancing
-            restrictions lift, we'll be looking for volunteers.
+            <p className="mb-4">
+              We’re always looking for funds to help us teach, run programs, and
+              get bikes out into the community. And, once social distancing
+              restrictions lift, we'll be looking for volunteers.
+            </p>
             <DonateButton />
           </div>
         </div>

@@ -1,0 +1,24 @@
+services:
+  # What to call the service hosting the site. Because there is only
+  # one service, it is automatically set as the default service, which
+  # does a few things
+  #   1. Clones the git repository into the service container
+  #   2. Exposes port 80 to the Tugboat HTTP proxy
+  #   3. Routes requests to the preview URL to this service
+  apache:
+    # Use the available version of Apache by not specifying a version
+    image: tugboatqa/httpd
+
+    # A set of commands to run while building this service
+    commands:
+      init:
+        - curl -sL https://deb.nodesource.com/setup_16.x | sh
+        - apt-get install -y nodejs
+        - ln --symbolic --no-dereference --force "${TUGBOAT_ROOT}/public" "${DOCROOT}"
+        - cp ${TUGBOAT_ROOT}/.tugboat/.env.local ${TUGBOAT_ROOT}/.env.local
+      update:
+        - npm install --force
+      # Commands that set up the basic preview infrastructure
+      build:
+        - rm --recursive --force "${TUGBOAT_ROOT}/public"
+        - npm run-script build
