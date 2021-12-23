@@ -15,7 +15,6 @@ services:
         - curl -sL https://deb.nodesource.com/setup_16.x | sh
         - apt-get install -y nodejs
         - ln --symbolic --no-dereference --force "${TUGBOAT_ROOT}/public" "${DOCROOT}"
-        - cp ${TUGBOAT_ROOT}/.tugboat/.env.local ${TUGBOAT_ROOT}/.env.local
       update:
         - npm install --force
       # Commands that set up the basic preview infrastructure
