@@ -1,3 +1,4 @@
+import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import DonateButton from './donate-button';
 
@@ -22,7 +23,11 @@ export default function Donate() {
       </div>
       <div className="bg-cat bg-teal-500 bg-blend-multiply h-full w-full">
         <div className="mx-auto py-10 px-4 md:p-20 flex flex-col md:flex-row">
-          <img src="http://placehold.it/581x495.png" alt="robby" />
+          <StaticImage
+            src="../images/donation_photo.jpg"
+            alt="Robby working with a student"
+            placeholder="blurred"
+          />
           <div className="float-right bg-white flex flex-col flex-grow md:w-1/2 justify-center items-start order-first md:order-2 px-4 py-8 text-xl border-b-2 border-black md:border-0">
             <h2 className="block py-4 text-3xl font-bold text-black">
               Help out!

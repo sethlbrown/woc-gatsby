@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import wocLogo from '../images/woc-logo.png';
 
 export default function Footer() {
   return (
@@ -83,10 +82,9 @@ export default function Footer() {
               Hours
             </h4>
             <ul className="font-extralight tracking-wider">
-              <li className="mt-2">Sun. 11-5pm</li>
-              <li className="mt-2">Mon. 2-6pm</li>
-              <li className="mt-2">Wed. 2-5pm</li>
-              <li className="mt-2">Thurs. 1-7pm</li>
+              <li className="mt-2">Sun. noon-6pm</li>
+              <li className="mt-2">Tues. 2-6pm</li>
+              <li className="mt-2">Thurs. noon-6pm</li>
             </ul>
           </div>
           <div className="mt-8 h-64 w-full sm:col-span-2">
@@ -152,15 +150,10 @@ export default function Footer() {
                 </button>
               </div>
               <div className="mt-12 text-sm sm:flex sm:items-center">
-                <img
-                  src={wocLogo}
-                  alt="Logo for the Way of Compassion Foundation"
-                />
-                <div className="font-extralight leading-snug mt-4 sm:ml-4 text-gray-100 text-sm tracking-wider">
-                  The WOC Bike Project is part of the Way of Compassion
-                  Foundation.
-                  <br /> &copy; {new Date().getFullYear()} Way of Compassion
-                  Foundation
+                <div className="font-extralight leading-snug mt-4 text-gray-100 text-sm tracking-wider">
+                  The Carbondale Bike Project is part of the 3rd St. Center.
+                  <br /> &copy; {new Date().getFullYear()} Carbondale Bike
+                  Project
                 </div>
               </div>
             </div>

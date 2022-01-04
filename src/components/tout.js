@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { BsArrowRight } from '@react-icons/all-files/bs/BsArrowRight';
 import { StaticImage } from 'gatsby-plugin-image';
 
@@ -34,7 +35,7 @@ export default function Tout() {
         </h1>
         <p className="mt-6 font-semibold text-base sm:text-2xl text-teal-500 max-w-3xl">
           <div className="w-1/2 pb-4 border-t-2 border-white" />
-          Read Our Story{' '}
+          <Link to="/about">Read Our Story </Link>
           <BsArrowRight className="inline text-2xl sm:text-4xl font-black" />
         </p>
       </div>
