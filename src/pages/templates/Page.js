@@ -63,7 +63,7 @@ const SinglePage = ({ data }) => (
 );
 
 export const query = graphql`
-  query PageQuery($id: String!) {
+  query PageQuery($id: String) {
     page: sanityPost(id: { eq: $id }) {
       id
       title
